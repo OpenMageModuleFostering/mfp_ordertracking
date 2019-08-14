@@ -1,0 +1,17 @@
+{
+    "name": "OpenMageModuleFostering/Mfp_OrderTracking",
+    "type": "magento-module",
+    "license": "OSLv3.0",
+    "homepage": "",
+    "description": "Magento Tracking Order system allows Customers to track all order information without logging into Magento store.
+",
+    "authors": [
+    {
+        "name": "harpreet",
+        "email": "harpreetsinghphp@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

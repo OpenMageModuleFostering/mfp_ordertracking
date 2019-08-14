@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<config>
+    <tabs>
+        <ordertrack_tab module="ordertrack" translate="label">
+            <label>Ordertrack Manager</label>
+            <sort_order>100</sort_order>
+        </ordertrack_tab>
+    </tabs>
+    <sections>
+        <ordertrack_section module="ordertrack" translate="label">
+            <label>Ordertrack</label>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>ordertrack_tab</tab>
+            <groups>
+                <ordertrack_group translate="label">
+                    <label>General</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+		                    <trackactive translate="label tooltip comment">
+                            <label>Enable</label>
+                            <sort_order>30</sort_order>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Field ToolTip</tooltip>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            </trackactive>
+
+		                    <orderstatus translate="label tooltip comment">
+                            <label>Status</label>
+                            <sort_order>40</sort_order>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Field ToolTip</tooltip>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            </orderstatus>
+
+		                    <ordercarrier translate="label tooltip comment">
+                            <label>Carrier</label>
+                            <sort_order>50</sort_order>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Field ToolTip</tooltip>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            </ordercarrier>
+
+		                    <ordertrack translate="label tooltip comment">
+                            <label>Tracking Number</label>
+                            <sort_order>50</sort_order>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Field ToolTip</tooltip>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            </ordertrack>
+
+				
+                    </fields>
+                </ordertrack_group>
+            </groups>
+        </ordertrack_section>
+    </sections>
+</config>

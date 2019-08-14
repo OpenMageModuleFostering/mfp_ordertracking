@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+    <name>Mfp_OrderTracking</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licences/osl-3.0.php">OSLv3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Magento Tracking Order system allows Customers to track all order information without logging into Magento store.&#xD;
+</summary>
+    <description>Magento Tracking Order system allows Customers to track all order information without logging into Magento store The customer just need to fill out the order number and the valid email address into the system and it will display all the details of the said order with latest status, including the shipment tracking data also.&#xD;
+Note : Please include latest jquery file according to your need.&#xD;
+</description>
+    <notes>Magento Tracking Order system allows Customers to track all order information without logging </notes>
+    <authors><author><name>harpreet</name><user>harpreet</user><email>harpreetsinghphp@gmail.com</email></author></authors>
+    <date>2015-09-24</date>
+    <time>09:28:58</time>
+    <contents><target name="magecommunity"><dir name="Mfp"><dir name="OrderTrack"><dir name="Block"><dir name="Adminhtml"><file name="OrderTrackbackend.php" hash="5b0fbd0c456280c60f2b67778f928f1b"/></dir><file name="Index.php" hash="499432ee434fe70a154f0624e163d015"/></dir><dir name="Helper"><file name="Data.php" hash="2e9bbe222dd11ef0cd8531038fd7e233"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="OrdertrackbackendController.php" hash="4fab891128fc19c6cd5c2f04f8f02a8f"/></dir><file name="IndexController.php" hash="e5b436049625ef5c017bd339a8c97d5f"/></dir><dir name="etc"><file name="config.xml" hash="358bf3c80e47e1be61eccda583e8320e"/><file name="system.xml" hash="a51473646124eb9b4c3d69c0197e73d4"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mfp_OrderTrack.xml" hash="a20e9e4629607c68b6c4cdbd7df0eb31"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="ordertrack.xml" hash="d4c855ef38207b416e6471866f8303da"/></dir><dir name="template"><dir name="ordertrack"><file name="index.phtml" hash="f3c569fae3e4a9df3d3d7e304ba5fd1c"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="ordertrack.css" hash="c04fe238549af29ffeeb10ec3d4911be"/></dir></dir></dir></dir></target><target name="magelocal"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="loading.gif" hash=""/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

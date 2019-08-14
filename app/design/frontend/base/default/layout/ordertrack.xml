@@ -1,0 +1,28 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+    <default>
+	<reference name="top.links">
+   <action method="addLink" translate="label title">
+    <label>Order Track</label>
+    <url>ordertrack</url>
+    <title>Order Track</title>
+    <prepare>true</prepare>
+    <urlParams />
+    <position>10</position>
+   </action>
+  </reference>
+    </default>
+
+  <ordertrack_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="ordertrack/index" name="ordertrack_index" template="ordertrack/index.phtml"/>   
+    </reference>   
+				    <reference name="head">
+			<action method="addCss"><stylesheet>css/ordertrack.css</stylesheet></action>
+		</reference>     
+  </ordertrack_index_index>   
+</layout>   
+	

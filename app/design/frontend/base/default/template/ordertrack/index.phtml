@@ -1,0 +1,85 @@
+<?php
+$base_url = Mage::getBaseUrl();
+$active = trim(Mage::getStoreConfig('ordertrack_section/ordertrack_group/trackactive')); ?>
+<script>
+    jQuery(document).ready(function () {
+        jQuery("#delete-btn").click(function(){
+		jQuery('#loadingmessage').show();
+            jQuery.ajax({
+                type: "POST",
+                url: "<?php echo $base_url; ?>ordertrack/index/OrderDetails/", // 
+                data: {orderid: jQuery("#ordid").val()},
+                success: function(html){
+                    jQuery("#success-msg").html(html);
+					jQuery('#loadingmessage').hide();
+                },
+                error: function(){
+                }
+            });
+        });
+    });
+ </script>
+<?php
+if($active == 1)
+{
+?>
+
+<div id="about-copy" class="inquiryForm">
+	<h1>Track Your Order</h1>
+	<p><?php if($des_gen): ?><?php echo $des_gen; ?><?php endif; ?></p>
+    <?php if($indicates != "") { ?>
+		<div class="indicates"><span class="required"><em>*</em></span><?php echo $this->__($indicates); ?></div>
+	<?php } ?>
+	
+	<!--<form name="dealerInquiry" id="dealerInquiry" action="<?php echo $this->getUrl("ordertrack/index/OrderDetails"); ?>" method="post">-->
+    	<div class="fieldset">
+        	<ul class="form-list">
+            	<li class="fields">
+                	<div class="field">
+						<label>Enter Your Order Id:<span class="required"><em>*</em></span></label>
+                        <div class="input-box">
+                        	<input type="text" name="orderid" id="ordid" size="45" class="input-text required-entry input-box" />
+                        </div>
+                    </div>
+                    <div class="field">
+						<label>Email Address:<span class="required"><em>*</em></span></label>
+                        <div class="input-box">
+                        	<input type="text" name="email" size="45" class="input-text required-entry" />
+                        </div>
+                    </div>
+					
+                   
+                </li>
+        	</ul>
+            <div class="button-set">
+					<button type="submit" name="SUBMIT"  id="delete-btn" class="button" value="SUBMIT" "><span><span><?php if($btn_text): ?><?php echo $btn_text; ?><?php else: ?><?php echo "Submit"; ?><?php endif;  ?></span></span></button>
+            </div>
+        </div>
+   <!-- </form> -->
+    <div class="clear"></div>
+</div>
+<div class="order-details" id = "success-msg">
+</div>
+
+</div>
+<script type="text/javascript">
+//< ![CDATA[
+var customForm = new VarienForm('dealerInquiry');
+//]]>
+	function isNumberKey(evt)
+	{
+		 var charCode = (evt.which) ? evt.which : evt.keyCode
+		 if (charCode > 31 && (charCode < 48 || charCode > 57))
+		 {
+		 	return false;
+		}		
+		 return true;
+	} 
+
+</script>
+
+<?php } else { ?>
+<h1>Please Enable your module first</h1>
+<?php } ?>
+
+<div id ="loadingmessage" style="display:none;"><img src="<?php echo $this->getSkinUrl('css/loading.gif'); ?>" /></div>
